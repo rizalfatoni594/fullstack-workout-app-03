@@ -3,13 +3,13 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
-  --error: #e7195a;
+  --primary: hsl(163, 74%, 39%);
+  --error: hsl(341, 81%, 50%);
 }
 body {
-  background: #f1f1f1;
+  background: hsl(0, 0%, 95%);
   margin: 0;
-  font-family: 'Poppins';
+  font-family: Poppins;
 }
 header {
   background: #fff;
@@ -23,12 +23,13 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
+  color: hsl(0, 0%, 20%);
   text-decoration: none;
 }
 .pages {
   max-width: 1400px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 /* homepage */
@@ -38,12 +39,12 @@ header a {
   gap: 100px;
 }
 .workout-details {
-  background: #fff;
+  background: hsl(0, 0%, 100%);
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -53,17 +54,17 @@ header a {
 .workout-details p {
   margin: 0;
   font-size: 0.9em;
-  color: #555;
+  color: hsl(0, 0%, 33%);
 }
 .workout-details span {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
+  background: hsl(0, 0%, 95%);
   padding: 6px;
   border-radius: 50%;
-  color: #333;
+  color: hsl(0, 0%, 20%);
 }
 
 /* new workout form */
@@ -76,22 +77,22 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid hsl(0, 0%, 87%);
   border-radius: 4px;
   box-sizing: border-box;
 }
 form button {
   background: var(--primary);
   border: none;
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   padding: 10px;
-  font-family: 'Poppins';
+  font-family: Poppins;
   border-radius: 4px;
   cursor: pointer;
 }
 div.error {
   padding: 10px;
-  background: #ffefef;
+  background: hsl(0, 100%, 97%);
   border: 1px solid var(--error);
   color: var(--error);
   border-radius: 4px;
