@@ -55,6 +55,7 @@ export default function WorkoutForm() {
       <label>Exercise Title:</label>
       <input
         type='text'
+        placeholder='Exercise name'
         onChange={(e) => setTitle(e.target.value)}
         value={title}
         ref={inputRef}
@@ -65,6 +66,7 @@ export default function WorkoutForm() {
       <label>Load (in kg):</label>
       <input
         type='number'
+        placeholder='Number of kg (at least 0)'
         onChange={(e) => setLoad(e.target.value)}
         value={load}
         className={
@@ -74,6 +76,7 @@ export default function WorkoutForm() {
       <label>Reps:</label>
       <input
         type='number'
+        placeholder='Number of repetition (at least 1)'
         onChange={(e) => setReps(e.target.value)}
         value={reps}
         className={
