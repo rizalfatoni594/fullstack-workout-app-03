@@ -1,104 +1,120 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* predefined rules */
 :root {
   --primary: hsl(163, 74%, 39%);
   --error: hsl(341, 81%, 50%);
+  --error-bg: #ffefef;
+  --main-background: #f1f1f1;
+  --secondary-background: #fff;
+  --main-color: #333;
+  --secondary-color: #555;
+  --tertiary-color: #fff;
+  --border: #ddd;
+  --boxshadow: hsla(0, 0%, 0%, 0.05);
 }
+
+/* base setup */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background: hsl(0, 0%, 95%);
+  background: var(--main-background);
   font-family: 'Poppins';
 }
+
+/* component: navbar */
 header {
-  background: hsl(0, 0%, 100%);
+  background: var(--secondary-background);
 }
 header .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 20px;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
 }
 header a {
-  color: hsl(0, 0%, 20%);
+  color: var(--main-color);
   text-decoration: none;
 }
+
+/* homepage */
 .pages {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* homepage */
+/* component: home */
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 100px;
 }
+
+/* component: workout details */
 .workout-details {
-  background: hsl(0, 0%, 100%);
-  margin: 20px auto;
-  padding: 20px;
+  background: var(--secondary-background);
+  margin: 20px 0;
+  padding: 10px 20px;
   position: relative;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.05);
+  box-shadow: 2px 2px 5px var(--boxshadow);
 }
 .workout-details h4 {
-  color: var(--primary);
-  margin: 0 0 10px 0;
   font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary);
 }
 .workout-details p {
-  color: hsl(0, 0%, 33%);
   font-size: 0.9rem;
+  color: var(--secondary-color);
 }
 .workout-details span {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: hsl(0, 0%, 95%);
+  background: var(--main-background);
+  color: var(--main-color);
   padding: 6px;
   border-radius: 50%;
-  color: hsl(0, 0%, 20%);
   cursor: pointer;
 }
 
-/* new workout form */
-label,
-input {
+/* component: workout form */
+form h3 {
+  margin: 20px 0;
+}
+form label,
+form input {
   display: block;
 }
-input {
-  padding: 10px;
+form input {
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 20px;
-  width: 100%;
-  border: 1px solid hsl(0, 0%, 87%);
+  padding: 10px;
+  border: var(--border);
   border-radius: 4px;
 }
 form button {
   background: var(--primary);
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 0.95rem;
+  color: var(--tertiary-color);
   border: none;
-  color: hsl(0, 0%, 100%);
-  padding: 10px;
   border-radius: 4px;
-  font-family: 'Poppins';
-  cursor: pointer;
 }
-div.error {
-  padding: 10px;
-  background: hsl(0, 100%, 97%);
+form input.error {
   border: 1px solid var(--error);
-  border-radius: 4px;
+}
+form div.error {
+  padding: 10px;
+  background: var(--error-bg);
   color: var(--error);
-  margin: 20px 0;
-}
-input.error {
   border: 1px solid var(--error);
+  border-radius: 4px;
 }
